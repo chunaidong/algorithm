@@ -1,6 +1,5 @@
 package com.chunaidong.algorithm.util;
 
-import java.security.SecureRandom;
 import java.util.Random;
 
 /**
@@ -36,6 +35,20 @@ public class ArrayBuilderFactory {
         for(int i = 0; i<arrays.length ; i++){
             System.out.println(arrays[i]);
         }
+    }
+
+    /**
+     * 是否已经排序
+     * @param arrays
+     * @return
+     */
+    public static boolean isSorted(int[] arrays) {
+        for(int i = 0 ; i<arrays.length - 1 ; i++){
+            if(arrays[i] > arrays[i+1]){
+                return false;
+            }
+        }
+        return true;
     }
 
 

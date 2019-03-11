@@ -1,4 +1,4 @@
-package com.chunaidong.algorithm.first;
+package com.chunaidong.algorithm.firstday.selection;
 
 
 import com.chunaidong.algorithm.util.ArrayBuilderFactory;
@@ -15,7 +15,7 @@ public class SelectionBasicSort {
         long startTime = System.currentTimeMillis();
         selectionSortArrays(arrays);
         long endTime = System.currentTimeMillis();
-        assert isSorted(arrays);
+        assert ArrayBuilderFactory.isSorted(arrays);
         System.out.println("总时间 " + (endTime-startTime));
         /*for(int i = 0 ; i < arrays.length ; i++){
             System.out.print(arrays[i]);
@@ -25,14 +25,7 @@ public class SelectionBasicSort {
 
     }
 
-    private static boolean isSorted(int[] arrays) {
-        for(int i = 0 ; i<arrays.length - 1 ; i++){
-            if(arrays[i] > arrays[i+1]){
-                return false;
-            }
-        }
-        return true;
-    }
+
 
     /**
      * 选择排序方法

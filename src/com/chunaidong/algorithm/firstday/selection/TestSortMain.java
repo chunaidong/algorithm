@@ -1,4 +1,4 @@
-package com.chunaidong.algorithm.first;
+package com.chunaidong.algorithm.firstday.selection;
 
 import com.chunaidong.algorithm.util.ArrayBuilderFactory;
 
