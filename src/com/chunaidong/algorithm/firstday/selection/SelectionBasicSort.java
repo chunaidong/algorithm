@@ -32,7 +32,7 @@ public class SelectionBasicSort {
      *    从数组找出最小元素，移动到首位，依次循环数组
      * @param arrays
      */
-    private static  void selectionSortArrays(int arrays[]) {
+    public static  void selectionSortArrays(int arrays[]) {
 
         int minIndex = 0;
         for(int i = 0; i <arrays.length ; i++ ){
