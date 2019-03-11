@@ -11,14 +11,27 @@ public class SelectionBasicSort {
 
     public static void main(String[] args) {
 
-        int arrays[] = ArrayBuilderFactory.buildIntArray(10, 0, 11);
+        int arrays[] = ArrayBuilderFactory.buildIntArray(100000, 0, 11);
+        long startTime = System.currentTimeMillis();
         selectionSortArrays(arrays);
-        for(int i = 0 ; i < arrays.length ; i++){
+        long endTime = System.currentTimeMillis();
+        assert isSorted(arrays);
+        System.out.println("总时间 " + (endTime-startTime));
+        /*for(int i = 0 ; i < arrays.length ; i++){
             System.out.print(arrays[i]);
+        }*/
+
+
+
+    }
+
+    private static boolean isSorted(int[] arrays) {
+        for(int i = 0 ; i<arrays.length - 1 ; i++){
+            if(arrays[i] > arrays[i+1]){
+                return false;
+            }
         }
-
-
-
+        return true;
     }
 
     /**
@@ -37,7 +50,6 @@ public class SelectionBasicSort {
                     int tmp = arrays[j];
                     arrays[j] = arrays[minIndex];
                     arrays[minIndex] = tmp;
-
                 }
             }
         }
