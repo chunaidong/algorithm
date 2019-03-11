@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f273a9e-353b-4f59-9817-89ec0da23d0a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/chunaidong/algorithm/firstday/insertion/TestInsertSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chunaidong/algorithm/firstday/insertion/TestInsertSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chunaidong/algorithm/firstday/selection/SelectionBasicSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chunaidong/algorithm/firstday/selection/SelectionBasicSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chunaidong/algorithm/firstday/insertion/BasicInsertSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chunaidong/algorithm/firstday/insertion/BasicInsertSort.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/chunaidong/algorithm/firstday/insertion/TestInsertSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="24" column="55" lean-forward="true" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+            <state relative-caret-position="240">
+              <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/chunaidong/algorithm/firstday/insertion/BasicInsertSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            <state relative-caret-position="180">
+              <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -112,15 +111,15 @@
         <option value="$PROJECT_DIR$/src/com/chunaidong/algorithm/first/SelectionBasicSort.java" />
         <option value="$PROJECT_DIR$/src/com/chunaidong/algorithm/firstday/SelectionBasicSort.java" />
         <option value="$PROJECT_DIR$/src/com/chunaidong/algorithm/util/ArrayBuilderFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/chunaidong/algorithm/firstday/insertion/BasicInsertSort.java" />
         <option value="$PROJECT_DIR$/src/com/chunaidong/algorithm/firstday/selection/SelectionBasicSort.java" />
         <option value="$PROJECT_DIR$/src/com/chunaidong/algorithm/firstday/insertion/TestInsertSort.java" />
+        <option value="$PROJECT_DIR$/src/com/chunaidong/algorithm/firstday/insertion/BasicInsertSort.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="83" />
-    <option name="y" value="150" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="313" />
+    <option name="y" value="264" />
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
@@ -213,7 +212,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552313262614" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552314356896" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -322,23 +321,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552305244288</updated>
-      <workItem from="1552305246386" duration="6996000" />
+      <workItem from="1552305246386" duration="8129000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6996000" />
+    <option name="totallyTimeSpent" value="8129000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="705" y="201" width="1346" height="688" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
-      <window_info id="Favorites" sideWeight="0.5011442" side_tool="true" weight="0.25133976" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.2860412" visible="true" weight="0.17845659" />
+      <window_info id="Favorites" sideWeight="0.37184873" side_tool="true" visible="true" weight="0.18730408" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.62815124" visible="true" weight="0.18730408" />
       <window_info id="Structure" order="1" sideWeight="0.7139588" side_tool="true" weight="0.25133976" />
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -348,7 +347,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.13729978" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.05928854" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -459,13 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chunaidong/algorithm/firstday/insertion/BasicInsertSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/chunaidong/algorithm/firstday/selection/SelectionBasicSort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -475,11 +467,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/chunaidong/algorithm/firstday/insertion/TestInsertSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="24" column="55" lean-forward="true" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+        <state relative-caret-position="240">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chunaidong/algorithm/firstday/insertion/BasicInsertSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
         </state>
       </provider>
     </entry>
