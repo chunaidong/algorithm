@@ -35,24 +35,33 @@ public class _206_反转列表 {
 	 * @param head
 	 * @return
 	 */
-	public ListNode reverseList(ListNode head) {
-		/* 递归
-		 * if (null == head || head.next == null) { return head; }
-		 * 
-		 * ListNode newHead = reverseList(head.next); head.next.next = head; head.next =
-		 * null;
-		 * 
-		 * return newHead;
-		 */
-		
-		ListNode newHead = null;
+	public static ListNode reverseList(ListNode head) {
+		 //递归
+		  if (null == head || head.next == null) { return head; }
+
+		  ListNode newHead = reverseList(head.next);
+		System.out.println("[newHead]:" + newHead);
+		System.out.println("[head]" + head);
+		  head.next.next = head;
+		  head.next =  null;
+
+		  return newHead;
+
+	/*	ListNode newHead = null;
 		while (head != null) {
 			ListNode tmp = head.next;
 			head.next = newHead;
 			newHead = head;
 			head = tmp;
 		}
-		return newHead;
+		return newHead;*/
+
+	}
+
+	public static void main(String[] args) {
+		ListNode listNode = new ListNode(new int[]{1,2,3,4,5,6});
+		System.out.println(listNode);
+		System.out.println(reverseList(listNode));
 
 	}
 

@@ -3,6 +3,8 @@ package wangmike.algorithm.二叉搜索树;
 import wangmike.algorithm.二叉搜索树.printer.BinaryTreeInfo;
 
 import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  *
@@ -69,6 +71,85 @@ public class BinarySearchTree<E> implements BinaryTreeInfo {
 
     }
 
+    /**
+     * 前序遍历
+     */
+    public void preorderTravelSal(){
+        this.preorderTravelSal(root);
+    }
+
+    private void preorderTravelSal(Node<E> node){
+        if(node == null) return;
+        System.out.println(node.element);
+        preorderTravelSal(node.left);
+        preorderTravelSal(node.right);
+    }
+
+    /**
+     * 中序
+     */
+    public void inorderTravelSal(){
+        this.inorderTravelSal(root);
+    }
+    private void inorderTravelSal(Node<E> node){
+        if(node == null) return;
+        inorderTravelSal(node.left);
+        System.out.println(node);
+        inorderTravelSal(node.right);
+    }
+
+    /**
+     * 中序
+     */
+    public void postorderTravelSal(){
+        this.postorderTravelSal(root);
+    }
+    private void postorderTravelSal(Node<E> node){
+        if(node == null) return;
+        inorderTravelSal(node.left);
+        inorderTravelSal(node.right);
+        System.out.println(node);
+    }
+
+    /**
+     * 层序遍历
+     */
+    public void levelTravelSal(){
+        if(root == null) return;
+        Queue<Node<E>> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()){
+            Node<E> node = queue.poll();
+            System.out.println(node.element);
+            if(node.left != null){
+                queue.offer(node.left);
+            }
+            if(node.right != null){
+                queue.offer(node.right);
+            }
+        }
+    }
+
+    /**
+     * 层序遍历
+     */
+    public void levelTravelSal(Visitor<E> visitor){
+        if(root == null) return;
+        Queue<Node<E>> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()){
+            Node<E> node = queue.poll();
+            visitor.visit(node.element);
+            if(node.left != null){
+                queue.offer(node.left);
+            }
+            if(node.right != null){
+                queue.offer(node.right);
+            }
+        }
+    }
+
+
     private int compare(E e1,E e2){
         if(null != comparator){
             return comparator.compare(e1, e2);
@@ -92,7 +173,9 @@ public class BinarySearchTree<E> implements BinaryTreeInfo {
     public Object root() {
         return root;
     }
-
+    public static interface  Visitor<E>{
+        void visit(E element);
+    }
     /**
      * how to get the left child of the node
      *
