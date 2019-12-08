@@ -138,7 +138,9 @@ public class ArrayList<E> extends AbstractList<E> {
         for(int i = 0 ; i < size;i++){
             elements[i] = null;
         }
-
+        if(size <= (elements.length >>1) && elements.length > DEFAULT_CAPACITY ){
+            elements = (E[]) new Object[DEFAULT_CAPACITY];
+        }
         size = 0;
     }
 
