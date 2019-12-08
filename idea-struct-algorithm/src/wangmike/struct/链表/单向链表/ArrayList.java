@@ -83,12 +83,28 @@ public class ArrayList<E> extends AbstractList<E> {
     public E remove(int index){
         checkIndexIsIllegal(index);
         //将最后一个元素滞空，从index+1位置一直到size位置均往前移动
+        trimSize();
         E element = elements[index];
         for(int i = index + 1; i < size; i++){
             elements[i - 1] = elements [i];
         }
         elements[--size] = null;
         return element;
+    }
+
+    /**
+     * 缩容
+     */
+    private void trimSize(){
+        int capacity = elements.length;
+        int newCapacity = capacity >> 1;
+        //当数组长度 大于 容量时，不需要缩容。数组长度小于默认容量时，也不需要缩容
+        if(size > newCapacity || size <= DEFAULT_CAPACITY) return;
+        E[] newElements = (E[]) new Object[newCapacity];
+        for(int i = 0 ; i<size;i++){
+            newElements[i] = elements[i];
+        }
+        elements = newElements;
     }
 
     /**

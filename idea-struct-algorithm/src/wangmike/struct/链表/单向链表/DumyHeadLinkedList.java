@@ -6,9 +6,13 @@ import wangmike.struct.链表.AbstractList;
  * 单向链表 dumyHead
  * @param <E>
  */
-public class LinkedList<E> extends AbstractList<E> {
+public class DumyHeadLinkedList<E> extends AbstractList<E> {
 
     private Node<E> first;
+
+    public DumyHeadLinkedList(){
+        first = new Node<>(null, null);
+    }
 
     /**
      * 获取index位置的元素
@@ -46,12 +50,8 @@ public class LinkedList<E> extends AbstractList<E> {
     @Override
     public void add(int index, E element) {
         //添加元素时，要注意0的位置，还需要特别注意边界点的位置
-        if(index == 0){
-            first = new Node<>(element, first);
-        }else{
-            Node<E> prev = node(index - 1);
-            prev.next = new Node<>(element, prev.next);
-        }
+        Node<E> prev = index == 0? first:node(index - 1);
+        prev.next = new Node<>(element, prev.next);
         size ++;
     }
 
@@ -65,14 +65,10 @@ public class LinkedList<E> extends AbstractList<E> {
     public E remove(int index) {
         //删除节点时，需要注意零节点的位置
         checkIndexIsIllegal(index);
-        Node<E> node = first;
-        if(index == 0){
-            first = first.next;
-        }else{
-            Node<E> prev = node(index -1);
-            node = prev.next;
-            prev.next = node.next;
-        }
+        Node<E> prev = index == 0? first:node(index - 1);
+        Node<E> node = prev.next;
+        prev.next = node.next;
+
         size --;
         return node.element;
     }
