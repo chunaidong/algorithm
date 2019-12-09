@@ -26,7 +26,7 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
         checkElement(element);
         //如果跟节点为空，则是第一个添加的元素
         if(root == null){
-            root = new Node<E>(element, null);
+            root = creatNode(element, null);
             size ++;
             return;
         }
@@ -51,7 +51,7 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
             }
         }
         //创建新节点
-        Node<E> newNode = new Node<E>(element,parent);
+        Node<E> newNode = creatNode(element,parent);
         //判断放父节点的左侧还是右侧
         if(cmp < 0 ){
             parent.left = newNode;
@@ -59,9 +59,16 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
             parent.right = newNode;
         }
         size ++;
+        afterAdd(node);
     }
 
+    protected void afterAdd(Node<E> node){
 
+    }
+
+    protected Node<E> creatNode(E element,Node<E> parent){
+        return new Node<>(element, parent);
+    }
 
     /**
      * 判断是否为完全二叉树
@@ -100,7 +107,9 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
         return ((Comparable)e1).compareTo(e2);
     }
 
+    protected void afterRemove(Node<E> node){
 
+    }
 
     /**
      * 删除元素
@@ -133,9 +142,11 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
             }else{
                 node.parent.right = replaceNode;
             }
+            afterRemove(node);
         }else if(node.parent == null){
             //表示node是叶子节点 并且是根节点
             root = null;
+            afterRemove(node);
         }else{
             //度为0
             //判断当前节点是在父节点的左还是右
@@ -144,6 +155,7 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
             }else{
                 node.parent.right = null;
             }
+            afterRemove(node);
         }
     }
 
