@@ -227,6 +227,21 @@ public class BinaryTree<E> implements BinaryTreeInfo {
 		public boolean isRightChild(){
 			return parent != null && this == parent.right;
 		}
+
+		/**
+		 * 获取叔父节点
+		 * @return
+		 */
+		public Node<E> sibling(){
+			if(isLeftChild()){
+				return parent.right;
+			}
+			if(isRightChild()){
+				return parent.left;
+			}
+			return null;
+		}
+
 	}
 
 	@Override
