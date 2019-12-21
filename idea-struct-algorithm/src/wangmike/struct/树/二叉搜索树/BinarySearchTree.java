@@ -35,7 +35,7 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
         //新节点的父节点
         Node<E> parent = null;
         int cmp = 0;
-        if(node != null){
+        while(node != null){
             //比较两个元素的大小
             cmp = compare(element, node.element);
             parent = node;
